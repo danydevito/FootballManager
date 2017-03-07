@@ -1,0 +1,3 @@
+zmieniony status
+
+nowy tekst
