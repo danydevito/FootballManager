@@ -7,3 +7,5 @@ nowe zdanie
 czy wyœwietli?
 
 podgl¹d historii zmian
+
+cofanie zmiany
