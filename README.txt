@@ -9,3 +9,5 @@ czy wyœwietli?
 podgl¹d historii zmian
 
 cofanie zmiany
+
+pierwsze tagowanie
