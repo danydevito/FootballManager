@@ -10,42 +10,23 @@ import java.net.MalformedURLException;
 public class LoginPanel extends JPanel implements ActionListener{
     private JTextField nameField;
     private JButton loginButton;
-    private LoginFrame listener;
+//    private LoginFrame listener;
     public String name;
-    public String title;
 
-    public String UstawNazwe(String nazwa){
-        this.name=nazwa;
-        return nazwa;
-    }
-
-    public LoginPanel(LoginFrame listener){
-        super();
-        setLayout(new CardLayout(10,20));
-        this.listener=listener;
-        this.listener.setLoginPanel(this);
-        createComponents();
-        setName(name);
-        getName();
-        System.out.println(name);
-        title=name;
-        System.out.println(title);
-    }
     public LoginPanel(){
-        UstawNazwe(title);
-        System.out.println(name);
-        setName(title);
-        getName();
-    }
-
-    private void createComponents(){
+        super();
+//        setLayout(new CardLayout(10,20));
+//        this.listener=listener;
+//        this.listener.setLoginPanel(this);
         JPanel inputPanel = new JPanel();
+        add(inputPanel);
         inputPanel.setLayout(new FlowLayout());
+        nameField=new JTextField(20);
+        inputPanel.add(nameField);
+        nameField.setLocation(100,150);
         String[] kluby={"Arsenal Londyn","AS Monaco","Real Madryt","Benfica Lizbona","Juventus Turyn","Bayern Monachium","Wisła Kraków","-- nowy --"};
         String ans =(String) JOptionPane.showInputDialog(null,null,"Wybierz klub z listy",JOptionPane.QUESTION_MESSAGE,new ImageIcon("images/pilka.gif"),kluby,kluby[0]);
-        nameField=new JTextField(20);
 
-        inputPanel.add(nameField);
         if (ans.equals("-- nowy --")){
             inputPanel.add(new JLabel("Aby utworzyć klub wpisz jego nazwę w powyższym okienku i zatwierdź klikając OK"));
         }else {nameField.setText(ans);}
@@ -55,9 +36,10 @@ public class LoginPanel extends JPanel implements ActionListener{
         loginButton.addActionListener(this);
         name=nameField.getText();
 
-        this.add(inputPanel);
+        setName(name);
+        getName();
+        System.out.println(name);
     }
-
     public void setName(String name){
         this.name=name;
     }

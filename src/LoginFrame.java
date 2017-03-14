@@ -9,13 +9,13 @@ import java.net.MalformedURLException;
  */
 public class LoginFrame extends JFrame implements ActionListener {
     private JFrame frame;
-    private LoginPanel loginPanel;
+//    private LoginPanel loginPanel;
 
 
-    public void setLoginPanel(LoginPanel loginPanel){this.loginPanel=loginPanel;}
+//    public void setLoginPanel(LoginPanel loginPanel){this.loginPanel=loginPanel;}
     public LoginFrame(){
         super("Logowanie");
-        JPanel loginPanel = new LoginPanel(this);
+        JPanel loginPanel = new LoginPanel();
         add(loginPanel);
         setPreferredSize(new Dimension(600,400));
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
